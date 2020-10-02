@@ -20,4 +20,10 @@
     <string name="enter_your_phone_number">Enter your phone number</string>
     <string name="sign_up">Sign Up</string>
     <string name="already_have_an_account_login">Already have an account?? Login</string>
+
+    <string name="switch_to_admin_mode">Switch to admin mode</string>
+    <string name="adminmode">TODO</string>
+    <string name="admin_mode">Admin Mode</string>
+    <string name="welcome_admin">Welcome Admin</string>
+    <string name="costumer_mode">Costumer Mode</string>
 </resources>

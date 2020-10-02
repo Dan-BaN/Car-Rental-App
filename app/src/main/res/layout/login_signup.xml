@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".login_signup"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".signup"
     android:orientation="vertical"
     android:background="#f2f2f2"
-    android:padding="20dp">
+    android:padding="20dp"
+    >
 
+    <ImageButton
+        android:id="@+id/customermode"
+        android:layout_gravity="end"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@android:drawable/ic_menu_manage"
+        android:contentDescription="@string/adminmode"
+        />
+
+
+    <TextView
+        android:id="@+id/Admintext"
+        android:textAlignment="textEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/admin_mode" />
 
     <ImageView
 
@@ -19,15 +44,16 @@
         android:contentDescription="@string/todo"
         android:transitionName="logoImage"/>
 
-        <TextView
-            android:padding="10dp"
-            android:id="@+id/welcomeback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_there_welcome_back"
-            android:textSize="40sp"
-            android:fontFamily="cursive"
-            android:transitionName="logoText"/>
+
+    <TextView
+        android:padding="10dp"
+        android:id="@+id/welcomeback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_there_welcome_back"
+        android:textSize="40sp"
+        android:fontFamily="cursive"
+        android:transitionName="logoText"/>
 
 
     <TextView
@@ -129,6 +155,7 @@
 
 
     </LinearLayout>
-
-
 </LinearLayout>
+
+
+</ScrollView>

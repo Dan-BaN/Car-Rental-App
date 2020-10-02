@@ -11,6 +11,7 @@ import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -19,18 +20,19 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class login_signup extends AppCompatActivity {
     //variables
     Button login_btn,signup;
+    ImageButton adminmode;
     ImageView carimage;
     TextView welcome, signintext;
     TextInputEditText Email,Password;
     FirebaseAuth firebaseAuth;
     ProgressBar progressBar;
+
 
 
     @Override
@@ -49,9 +51,19 @@ public class login_signup extends AppCompatActivity {
         Email =  findViewById(R.id.email_signin);
         Password =  findViewById(R.id.password);
         login_btn =  findViewById(R.id.loginbtn);
+        adminmode = findViewById(R.id.customermode);
 
         firebaseAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
+
+
+        adminmode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), AdminLogin.class));
+                finish();
+            }
+        });
 
 
         login_btn.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +96,7 @@ public class login_signup extends AppCompatActivity {
                          public void onComplete(@NonNull Task<AuthResult> task) {
                              if (task.isSuccessful()) {
 
-                                 Toast.makeText(login_signup.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+                                 Toast.makeText(login_signup.this, "Logged in successfully"  , Toast.LENGTH_SHORT).show();
                                  startActivity(new Intent(getApplicationContext(), home_screen.class));
                              } else {
 
