@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Car Rental</string>
+    <string name="car_rental">Car Rental</string>
+    <string name="nation_wide_car_rental_service">Nation Wide Car Rental Service</string>
+    <string name="hello_there_welcome_back">Hello There, Welcome Back</string>
+    <string name="sign_in_to_continue">Sign In to continue</string>
+
+    <string name="enter_your_email_address">Enter your email address</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="login">Login</string>
+    <string name="new_user_sign_up">New user? Sign up</string>
+    <string name="welcome">Welcome</string>
+    <string name="sign_up_to_start_your_journey">Sign up to start your journey</string>
+    <string name="enter_your_full_name">Enter your full name</string>
+    <string name="enter_your_nic">Enter your NIC</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="todo">TODO</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_phone_number">Enter your phone number</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account_login">Already have an account?? Login</string>
+</resources>

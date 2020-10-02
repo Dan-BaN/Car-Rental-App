@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "280339252103",
+    "firebase_url": "https://car-rental-13319.firebaseio.com",
+    "project_id": "car-rental-13319",
+    "storage_bucket": "car-rental-13319.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280339252103:android:512439cd41de54af894922",
+        "android_client_info": {
+          "package_name": "com.geekdroids.carrental"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280339252103-uh1ose6dqbbafps9felm37b0vq9vh3nu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwu13_0fBTHeYVYp1yjSliMQScslBG7a8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280339252103-uh1ose6dqbbafps9felm37b0vq9vh3nu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
