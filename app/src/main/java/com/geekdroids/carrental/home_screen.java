@@ -92,9 +92,9 @@ public class home_screen extends AppCompatActivity {
     public void ManageProfile(View view) {
 
         Intent intent = new Intent(view.getContext(), Profile.class);
-        intent.putExtra("fullname", "aaaa");
-        intent.putExtra("email", "bbbb");
-        intent.putExtra("nic", "abc123");
+        intent.putExtra("fullname", fullname.getText().toString());
+        intent.putExtra("email",  email.getText().toString());
+        intent.putExtra("nic",  nic.getText().toString());
         startActivity(intent);
 
     }

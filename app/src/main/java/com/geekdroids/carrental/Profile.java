@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -31,6 +32,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Profile extends AppCompatActivity {
 
 
@@ -40,6 +44,7 @@ public class Profile extends AppCompatActivity {
     ImageView profileImage;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firestore;
+    FirebaseUser user;
     StorageReference storageReference;
     String userId;
 
@@ -74,6 +79,7 @@ public class Profile extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firestore = FirebaseFirestore.getInstance();
+        user = firebaseAuth.getCurrentUser();
 
         storageReference = FirebaseStorage.getInstance().getReference();
         StorageReference profileRef = storageReference.child("users/" +firebaseAuth.getCurrentUser().getUid()+ "/profile.jpg");
@@ -105,6 +111,37 @@ public class Profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(profileFullName.getText().toString().isEmpty() || profileEmail.getText().toString().isEmpty() || profileNic.getText().toString().isEmpty()){
+                    Toast.makeText(Profile.this,"one or many fields are empty",Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                final String email = profileEmail.getText().toString();
+                user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        DocumentReference documentReference = firestore.collection("users").document(user.getUid());
+                        Map<String, Object> edited = new HashMap<>();
+                        edited.put("email", email);
+                        edited.put("fName", profileFullName.getText().toString());
+                        edited.put("Nic",profileNic.getText().toString());
+
+                        documentReference.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(Profile.this, "Profile updated", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(),home_screen.class));
+                                finish();
+                            }
+                        });
+                        Toast.makeText(Profile.this,"Email is changed",Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Profile.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
