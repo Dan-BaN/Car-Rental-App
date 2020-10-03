@@ -3,6 +3,7 @@ package com.geekdroids.carrental;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -60,6 +61,8 @@ public class home_screen extends AppCompatActivity {
         });
 
 
+
+
         userId = firebaseAuth.getCurrentUser().getUid();
 
         DocumentReference documentReference = firestore.collection("users").document(userId);
@@ -78,6 +81,7 @@ public class home_screen extends AppCompatActivity {
 
             }
         });
+
 
 
 

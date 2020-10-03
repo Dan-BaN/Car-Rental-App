@@ -174,7 +174,9 @@ public class Profile extends AppCompatActivity {
                 fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
+                        startActivity(new Intent(getApplicationContext(), home_screen.class));
                         Picasso.get().load(uri).into(profileImage);
+
                     }
                 });
             }
