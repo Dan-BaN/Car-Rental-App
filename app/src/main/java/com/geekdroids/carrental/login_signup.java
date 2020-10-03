@@ -57,13 +57,10 @@ public class login_signup extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
 
-        adminmode.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), AdminLogin.class));
-                finish();
-            }
-        });
+        if(firebaseAuth.getCurrentUser() != null){
+            startActivity(new Intent(getApplicationContext(), home_screen.class));
+            finish();
+        }
 
 
         login_btn.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +106,15 @@ public class login_signup extends AppCompatActivity {
                  }
              }
              );
+
+
+        adminmode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), AdminLogin.class));
+                finish();
+            }
+        });
 
 
 

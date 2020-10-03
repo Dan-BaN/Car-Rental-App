@@ -41,6 +41,8 @@ public class signup extends AppCompatActivity {
 
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,6 +120,8 @@ public class signup extends AppCompatActivity {
                             user.put("Password", Password);
                             user.put("email", email);
 
+
+
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
@@ -132,6 +136,10 @@ public class signup extends AppCompatActivity {
                                 }
                             });
 
+
+
+
+
                             startActivity(new Intent(getApplicationContext(),home_screen.class));
                         }else{
 
@@ -139,6 +147,9 @@ public class signup extends AppCompatActivity {
                             progressBar.setVisibility(View.GONE);
 
                         }
+
+
+
                     }
                 });
             }
