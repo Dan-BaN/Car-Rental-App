@@ -15,7 +15,7 @@ private int numb;
         Model = model;
         Owner = owner;
         this.ID = ID;
-    }
+    }//constructor
 
     public String getModel() {
         return Model;
