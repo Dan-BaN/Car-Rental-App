@@ -5,7 +5,7 @@ public class Cars {
     private String Owner;
     private String ID;
 
-    private String carssa;
+private int numb;
 
     public Cars(){
 
