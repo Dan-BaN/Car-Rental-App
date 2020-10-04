@@ -14,6 +14,7 @@
         <activity android:name=".Admin_homescreen" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".home_screen" />
+        <activity android:name=".add_employee" />
         <activity android:name=".signup" />
         <activity android:name=".login_signup" />
         <activity android:name=".MainActivity">

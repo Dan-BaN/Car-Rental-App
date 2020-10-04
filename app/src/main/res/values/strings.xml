@@ -28,4 +28,17 @@
     <string name="costumer_mode">Costumer Mode</string>
     <string name="user_name">user name</string>
     <string name="logout">Logout</string>
+
+    <string name="add_emp_to_db">Add new Employees</string>
+    <string name="enter_emp_name">Enter Full Name</string>
+    <string name="emp_dob">Enter Date Of Birth</string>
+    <string name="enter_emp_nic">Enter NIC Number</string>
+    <string name="enter_emp_phone">Enter Phone Number</string>
+    <string name="emp_post">Enter Empolyee Occupation</string>
+    <string name="enter_emp_email">Enter Empolyee Email</string>
+    <string name="save_emp">Add Employee</string>
+
+
+
+
 </resources>

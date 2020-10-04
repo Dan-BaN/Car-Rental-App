@@ -6,39 +6,39 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".signup"
-    android:orientation="vertical"
-    android:background="#f2f2f2"
-    android:padding="20dp">
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/car"
-        android:contentDescription="@string/todo"
-        android:transitionName="logoImage"/>
-
-    <TextView
-        android:id="@+id/welcome"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textSize="40sp"
-       android:fontFamily="cursive"
-        android:layout_marginTop="20dp"
-        android:transitionName="logoText"/>
+        tools:context=".signup"
+        android:orientation="vertical"
+        android:background="#f2f2f2"
+        android:padding="20dp">
 
-    <TextView
-        android:padding="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_up_to_start_your_journey"
-        android:fontFamily="cursive"
-        android:textSize="18sp"
-        android:transitionName="desc_transition"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/car"
+            android:contentDescription="@string/todo"
+            android:transitionName="logoImage"/>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textSize="40sp"
+            android:fontFamily="cursive"
+            android:layout_marginTop="20dp"
+            android:transitionName="logoText"/>
+
+        <TextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_emp_to_db"
+            android:fontFamily="cursive"
+            android:textSize="18sp"
+            android:transitionName="desc_transition"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -60,9 +60,9 @@
                     android:id="@+id/emp_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_full_name"
+                    android:hint="@string/enter_emp_name"
                     android:inputType="text"
-                    android:transitionName="fullname_transiton" />
+                    android:transitionName="empfullname_transiton" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,12 +78,12 @@
                 app:counterMaxLength="20">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nickname_signin"
+                    android:id="@+id/dob"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_username"
+                    android:hint="@string/emp_dob"
                     android:inputType="text"
-                    android:transitionName="username_transiton" />
+                    android:transitionName="empdob_transiton" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -98,11 +98,11 @@
                 app:boxStrokeColor="@android:color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nic_signin"
+                    android:id="@+id/enic"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_nic"
-                    android:transitionName="nic_transiton" />
+                    android:hint="@string/enter_emp_nic"
+                    android:transitionName="empnic_transiton" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -115,12 +115,12 @@
                 app:boxStrokeColor="@android:color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/phone_signin"
+                    android:id="@+id/e_phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_phone_number"
+                    android:hint="@string/enter_emp_phone"
                     android:inputType="number"
-                    android:transitionName="phone_transiton" />
+                    android:transitionName="ephone_transiton" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -134,12 +134,12 @@
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password_signin"
+                    android:id="@+id/emp_post"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_password"
+                    android:hint="@string/emp_post"
                     android:inputType="textPassword"
-                    android:transitionName="password_transiton" />
+                    android:transitionName="post_transition" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -152,25 +152,25 @@
                 app:boxStrokeColor="@android:color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email_signin"
+                    android:id="@+id/emp_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/enter_your_email"
+                    android:hint="@string/enter_emp_email"
                     android:inputType="textEmailAddress"
-                    android:transitionName="email_transiton" />
+                    android:transitionName="emp_email_transiton" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/sign_upbtn"
+                android:id="@+id/addE_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="#000"
-                android:text="@string/sign_up"
+                android:text="@string/save_emp"
                 android:textColor="#fff"
-                android:transitionName="signupbtn_transiton" />
+                android:transitionName="addemp_transiton" />
 
             <ProgressBar
                 android:id="@+id/progressBarSignup"
@@ -180,16 +180,7 @@
                 android:visibility="invisible"
                 tools:visibility="invisible" />
 
-            <Button
-                android:id="@+id/login_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#00000000"
-                android:text="@string/already_have_an_account_login"
-                android:textColor="@android:color/black"
-                android:transitionName="loginbtn_transiton" />
+
 
 
         </LinearLayout>

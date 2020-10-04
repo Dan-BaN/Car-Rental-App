@@ -51,7 +51,7 @@ public class signup extends AppCompatActivity {
 
         //Hooks
 
-        regName = findViewById(R.id.username_signin);
+        regName = findViewById(R.id.emp_name);
         regUserName = findViewById(R.id.nickname_signin);
         regNic = findViewById(R.id.nic_signin);
         regPhoneNo = findViewById(R.id.phone_signin);
