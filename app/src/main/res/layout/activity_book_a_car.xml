@@ -4,41 +4,216 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".book_a_car"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".book_a_car">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/selectCarTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select a car model"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="10dp">
-
-    </TextView>
-
-
-    <Spinner
-        android:id="@+id/selectcar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="152dp" />
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/selectCarTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="20dp"
+            android:text="Select a car model">
+
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/selectcar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+        <TextView
+            android:id="@+id/selectLocationTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Select a Location">
+
+        </TextView>
+
+
+        <Spinner
+            android:id="@+id/selectLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:layout_editor_absoluteX="50dp"
+            tools:layout_editor_absoluteY="200dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/Pickdatetxt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Pick a start date"
+                android:textSize="20dp"
+
+                ></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/datelayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Pickdatetxt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                app:boxStrokeColor="@android:color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setDate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:hint="day/month/year"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/Pickenddatetxt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toEndOf="@+id/Pickdatetxt"
+
+                android:text="Pick a start date"
+                android:textSize="20dp"
+
+                ></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/dateEndlayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Pickenddatetxt"
+                android:layout_marginStart="10dp"
+
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/datelayout"
+                app:boxStrokeColor="@android:color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setendDate"
+                    android:layout_width="150dp"
+
+                    android:layout_height="wrap_content"
+                    android:hint="day/month/year"
+                    android:inputType="date" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/Picktimetxt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateEndlayout"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Pick a start time"
+                android:textSize="20dp"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/timelayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Picktimetxt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                app:boxStrokeColor="@android:color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="hour:minute"
+                    android:inputType="time" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/PickEndtimetxt"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dateEndlayout"
+
+                android:layout_marginStart="80dp"
+                android:layout_toRightOf="@+id/Picktimetxt"
+                android:text="Pick a return time"
+                android:textSize="20dp"></TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/timelayout1"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PickEndtimetxt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toRightOf="@+id/timelayout"
+                app:boxStrokeColor="@android:color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/setendTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="hour:minute"
+                    android:inputType="time" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/save"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp">
+        android:text="Save">
 
 
     </Button>
