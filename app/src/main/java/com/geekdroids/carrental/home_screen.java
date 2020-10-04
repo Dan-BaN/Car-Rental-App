@@ -102,4 +102,9 @@ public class home_screen extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public void BookACar(View view){
+        Intent intent = new Intent(view.getContext(), book_a_car.class);
+        startActivity(intent);
+    }
 }
