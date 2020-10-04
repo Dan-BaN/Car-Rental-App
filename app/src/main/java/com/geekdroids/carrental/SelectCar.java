@@ -3,7 +3,7 @@ package com.geekdroids.carrental;
 public class SelectCar {
 
     private String carList;
-    private String list;
+    private String car;
 
     public SelectCar(){
 
