@@ -174,11 +174,10 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/dateEndlayout"
-
                 android:layout_marginStart="80dp"
                 android:layout_toRightOf="@+id/Picktimetxt"
                 android:text="Pick a return time"
-                android:textSize="20dp"></TextView>
+                android:textSize="20dp" />
 
             <com.google.android.material.textfield.TextInputLayout
 
@@ -188,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/PickEndtimetxt"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:layout_toRightOf="@+id/timelayout"
                 app:boxStrokeColor="@android:color/black">
