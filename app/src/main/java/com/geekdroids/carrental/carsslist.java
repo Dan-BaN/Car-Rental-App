@@ -22,6 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -35,7 +36,7 @@ public class carsslist extends AppCompatActivity {
     ProgressBar progressBar1;
     FirebaseFirestore firestore;
     DatabaseReference reff;
-    Cars cars;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,31 +45,30 @@ public class carsslist extends AppCompatActivity {
         setContentView(R.layout.activity_carsslist);
 
 
+
         carmodell = findViewById(R.id.car_model);
         ownerr = findViewById(R.id.owner);
         vehicleid = findViewById(R.id.vid);
         addcar = findViewById(R.id.add_car);
 
-        reff = FirebaseDatabase.getInstance().getReference().child("CAR");
 
 
         addcar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
 
-                String model = carmodell.getText().toString();
+                public void onClick(View v) {
+
+                startActivity(new Intent(getApplicationContext(), Car.class));
+                finish();
+
+                String carmodel = carmodell.getText().toString();
                 String owner = ownerr.getText().toString();
-                String ID = vehicleid.getText().toString();
-
-
-                cars = new Cars(model, owner, ID);
-                reff.child(ID).setValue(cars);
+                String vehicleidd = vehicleid.getText().toString();
 
 
             }
+
         });
-
-
     }
 }
 
